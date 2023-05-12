@@ -33,10 +33,8 @@ const data = 'txtLogin=397DWLGALO&txtSenha=33748C83&txtData=05/04/2023&txtHora=0
             entry.on('end', () => { resolve(content); });
             entry.on('error', reject);
           });
-
           // Conteúdo do arquivo XML
           console.log('Arquivo XML:', fileContent);
-
           // Gravar esse JSON no banco de dados
           const jsonXML = await parser.parseStringPromise(fileContent);
         } else {
